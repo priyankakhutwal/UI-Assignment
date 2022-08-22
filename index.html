@@ -21,674 +21,265 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <section class="listing-page">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-lg-3 col-12">
-                    <div class="product-heading text-uppercase">
-                        <h2>Products</h2>
-                    </div>
-                </div>
-                <div class="text-center pr-0 col-lg-6 col-9">
-                    <div class="mb-2 search_bar form-group">
-                        <input type="text" class="form-control" id="Search" placeholder="Search Here">
-                    </div>
-                </div>
-                <div class="col-lg-2 col-3">
-                    <div class="form-group">
-                        <button class="btn btn-md btn-warning">Search</button>
-                    </div>
-                </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-sm shadow-sm p-3">
+                
+                    <div class="col-md-2">
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-            <div class="row mt-5">
-                <div class="d-none d-lg-block col-lg-3">
-                    <div class="clear-filter mb-1">
-                        <a href="#">Clear Filter</a>
-                    </div>
-                    <div class="filter-section">
-                        <div class="filter-block">
-                            <div class="accordion" id="myAccordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne">stock
-                                            status</button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    In Stock
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo">Prebooking
-                                            Status</button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Prebooking
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-
-
-                                <div class="price-range">
-                                    <label for="customRange2" class="form-label">
-                                        <h5>Price</h5>
-                                    </label>
-                                    <input type="range" class="form-range" min="0" max="169000" id="customRange2">
-                                    <div class="price-range-label row">
-                                        <div class="price-low col-6">
-                                            <span>4000</span>
-                                        </div>
-                                        <div class="price-high col-6 text-end">
-                                            <span>50000</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item mt-3">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree">Model
-                                            Name</button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Scale
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Aspect
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Revox
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-
-                                <div class="accordion-item mt-3">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour">Approx
-                                            Weight</button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    10-15 Kg
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    1-10 Kg
-                                                </label>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-
-                                <div class="accordion-item mt-3">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFive">Brand</button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    SCOTT
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    BERGAMONT
-                                                </label>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-
-                                <div class="accordion-item mt-3">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button type="button" class="accordion-button collapsed text-uppercase"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseSix">Size</button>
-                                    </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse"
-                                        data-bs-parent="#myAccordion">
-                                        <div class="card-body  pt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    S
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    M
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    L
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    XL
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    S7
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    M9
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    M7
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    M9
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Links -->
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
                         </div>
-                    </div>
+                      </div>
                 </div>
-                <div class="col-lg-9">
-                    <div class="sorting_bar row border-top border-bottom">
-                        <div class="col-md-6">
-                            <div class="total_result">
-                                <p class="mb-0">20 Products</p>
-                            </div>
-                        </div>
-
-                        <div class="d-none d-md-block text-right col-md-6 ">
-                            <div class="p-0 text-right d-flex align-items-center justify-content-end">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>price :- High to Low</option>
-                                    <option value="1">price :- Low to High</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-6 p-0 mb-2 ">
-                            <div class="product_card">
-                                <div class="outof_stock">
-                                    <a href="#">
-                                        <p class="mb-0">Out of stock</p>
-                                    </a>
-                                </div>
-                                <div class="product_img">
-                                    <a href="#" class="">
-                                        <img src="Helmet.jpg"
-                                            class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 d-flex">
-                                        <div class="product-name">
-                                            <p class="mb-0"><a href="">NEW SPORTS PLUS HELMET</a></p>
-                                        </div>
-                                        <div class="cart pe-1">
-                                            <a data-bs-toggle="modal" data-bs-target="#addtocart">
-                                                <span class="material-symbols-outlined">
-                                                    shopping_cart
-                                                </span>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                                <div class="product-price">
-                                    <p class="mb-0">
-                                        <i class="fa fa-inr" aria-hidden="true"></i>
-                                        <span class="main_price pr-2 black">52900</span>
-                                        <span class="main_price pr-2 black"><s>56900</s></span>
-                                    </p>
-                                </div>
-
-                                <div class="item_action mt-0 pb-0">
-                                    <div class="item_action_link">
-
-                                    </div>
-                                    <div class="compare_feat">
-                                        <a class="text-underline" href="#">Compare</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        
-                       
-                    </div>
-
-                    <div class="load-more-sect text-center mt-3">
-                        <div class="load-more">
-                            <button type="button" class="btn btn-warning">Load More</button>
-                        </div>
-                    </div>
+                <div class="col-md-5">
+                <ul class="navbar-nav">
+                    <li class="nav-item ml-3">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"><span class="badge badge-notify">3</span>Cart</i>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <i class="fa fa-heart" aria-hidden="true"><span class="badge badge-notify">3</span> Wishlist</i> 
+                    </li>
+                    <li class="nav-item ml-3 order_list">
+                        <i class="fa fa-list" aria-hidden="true">Order List</i>
+                        </li>
+                    <li class="nav-item ml-3 sign-out">
+                    <i class="fa fa-sign-out" aria-hidden="true">Sign Out</i>
+                    </li>
+                  </ul>
                 </div>
+                  
+              </nav>              
             </div>
-        </div>
-
-        <!-- small device filter -->
-        <div class="container-fluid d-block d-lg-none">
-            <div class="row sticky_btn_bar">
-
-                <a data-bs-toggle="modal" data-bs-target="#myFilterModal" class="text-uppercase black sticky_btn">
-                    <i class="fa fa-filter me-1" aria-hidden="true"></i>Filter</a>
-
-                <a data-bs-toggle="modal" data-bs-target="#mySortByModal" class="text-uppercase black sticky_btn">
-                    <i class="fa fa-sort me-1" aria-hidden="true"></i> Sort by</a>
-            </div>
-            <!-- The Filter Modal -->
-            <div class="modal" id="myFilterModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Filters</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="clear-filter mb-1">
-                                <a href="#">Clear Filter</a>
-                            </div>
-                            <div class="filter-section">
-                                <div class="filter-block">
-                                    <div class="accordion" id="myAccordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne">stock
-                                                    status</button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            In Stock
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">Prebooking
-                                                    Status</button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            Prebooking
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-
-                                        <div class="price-range">
-                                            <label for="customRange2" class="form-label">
-                                                <h5>Price</h5>
-                                            </label>
-                                            <input type="range" class="form-range" min="0" max="169000"
-                                                id="customRange2">
-                                            <div class="price-range-label row">
-                                                <div class="price-low col-6">
-                                                    <span>4000</span>
-                                                </div>
-                                                <div class="price-high col-6 text-end">
-                                                    <span>50000</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item mt-3">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">Model
-                                                    Name</button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            Scale
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            Aspect
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            Revox
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="accordion-item mt-3">
-                                            <h2 class="accordion-header" id="headingFour">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour">Approx
-                                                    Weight</button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            10-15 Kg
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            1-10 Kg
-                                                        </label>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="accordion-item mt-3">
-                                            <h2 class="accordion-header" id="headingFive">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseFive">Brand</button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            SCOTT
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            BERGAMONT
-                                                        </label>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="accordion-item mt-3">
-                                            <h2 class="accordion-header" id="headingSix">
-                                                <button type="button" class="accordion-button collapsed text-uppercase"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseSix">Size</button>
-                                            </h2>
-                                            <div id="collapseSix" class="accordion-collapse collapse"
-                                                data-bs-parent="#myAccordion">
-                                                <div class="card-body  pt-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            S
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            M
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            L
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            XL
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            S7
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            M9
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            M7
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            M9
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer justify-content-center">
-                            <button type="submit" class="btn btn-warning text-center">Submit</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- The Filter Modal End-->
-
-            <!-- The sort by Modal -->
-            <!-- The Modal -->
-            <div class="modal" id="mySortByModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body sort-by">
-                          
-                                <div class="text-center"><a class="black" data-bs-dismiss="modal"
-                                        href="#">Price : <span class="bold">Descending</span></a>
-                                </div>
-                                <hr class="mt-2 mb-2">
-                                <div class="text-center">
-                                    <a class="black" data-bs-dismiss="modal"
-                                        href="#">Price : <span class="bold">Ascending</span>
-                                    </a>
-                                </div>
-                                <hr class="mt-2 mb-2">
-                           
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-            <!-- The sort by Modal End -->
-
-            
-
-        </div>
-         <!--Modal Box after clicking on Cart Icon -->
-         <div class="modal" id="addtocart">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">SCOTT MOTO HELMET 550</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      
-                           
-                            <hr class="mt-2 mb-2">
-                       
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-        <!-- Modal Box after clicking on Cart Icon -->
     </section>
+    <div class="alert alert-success alert-dismissible fade" role="alert" id="buttonAlert">
+      Your Product Added sucessfully!
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+
+<!-- product section -->
+    <section class="mt-5">
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-md-2 product_filter p-5">
+                    <p>Filters</p>
+                <h6>Weight Range</h6> 
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     40-50 
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        10-20
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                        30-40
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        20-30
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        0-10
+                    </label>
+                  </div>
+                  <h6 class="mt-3">Sub Category</h6> 
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     LRPL 
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                       LRSO
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        LRST
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                        LRTS
+                    </label>
+                  </div>
+                  <h6 class="mt-3">Model Name</h6> 
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                       Scale
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Aspect
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Revox
+                      </label>
+                    </div>
+                    <h6 class="mt-3">Size</h6> 
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                         S
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <label class="form-check-label" for="flexCheckChecked">
+                          M
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          L
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          XL
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          S7
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          M9
+                        </label>
+                      </div>
+                    </div>
+
+                
+                <!-- product card -->
+                <div class="col-md-10">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3"> 
+                    <div class="card border-0 mr-2" style="width: 16rem;">
+                        <img class="card-img-top" src="./asset/listing-page-asset/yellow_shoes.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-title">KINABALU RC SHOE <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span></p>
+                          <h5 class="card-text">₹10000</h5>
+                          <a href="#" class="primary text_links">Compare</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3"> 
+                      <div class="card border-0" style="width: 17rem;">
+                        <img class="card-img-top" src="./asset/listing-page-asset/black_shoe.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <P class="card-title">KINABALU SHOE <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span></P>
+                          <h5 class="card-text">₹9500</h5>
+                          <a href="#" class="primary text_links">Compare</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3"> 
+                      <div class="card border-0" style="width: 17rem;">
+                        <img class="card-img-top" src="./asset/listing-page-asset/blue_shoes.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-title">KINABALU POWER SHOE <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span></p>
+                          <h5 class="card-text">₹12000</h5>
+                          <a href="#" class="primary text_links">Compare</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3"> 
+                        <div class="card border-0" style="width: 18rem;">
+                          <img class="card-img-top" src="./asset/listing-page-asset/Red_shoes.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <p class="card-title">SUPERTRAC RC WOMEN SHOE <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span></p>
+                            <h5 class="card-text">₹11000</h5>
+                            <a href="#" class="primary text_links">Compare</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3"> 
+                        <div class="card border-0 mt-2" style="width: 17rem;">
+                          <img class="card-img-top" src="./Helmet.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <p class="card-title"><a href="./product_detail.html">NEW SPORTS PLUS HELMET</a> <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span></p>
+                            <h5 class="card-text">₹51000</h5>
+                            <a href="#" class="primary text_links">Compare</a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            </div>
+
+             </div>
+        </div>
+    </section>
+ 
+
+    <!-- footer section -->
+  
+  <footer class="p-3">
+  <div class="container-fluid">
+    <hr>
+  <p class="footer-text text-center">we reserve the right to make changes to the product information contained on this site at any time without notice, including but not limited to equipment,specification,models,colors and materials</p>
+  </div>
+  
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+ $(".fa-cart-plus").click(function(){
+      $("#buttonAlert").addClass('show') //Shows Bootstrap alert
+})
+});
+</script>
+
 </body>
 
 </html>
